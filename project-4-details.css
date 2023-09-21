@@ -42,15 +42,6 @@ a:hover {
     text-decoration: underline;
 }
 
-.centered-image-1 {
-    width: 40%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0px; /* This will add 30 pixels of space above the image */
-    max-width: 50%; /* Decreased the size */
-}
-
 .image-caption {
     margin-bottom: 50px; /* Adjust this value to increase/decrease the space */
 }
@@ -64,7 +55,7 @@ a:hover {
 }
 
 .centered-image-1 {
-    width: 50%;
+    width: 35%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -74,7 +65,7 @@ a:hover {
 }
 
 .centered-image-2 {
-    max-width: 23%; /* Decreased the size */
+    max-width: 50%; /* Decreased the size */
     margin-bottom: 20px;
     margin-top: 40px;
     display: block;
@@ -92,7 +83,7 @@ a:hover {
 }
 
 .centered-image-4 {
-    max-width: 40%; /* Decreased the size */
+    max-width: 50%; /* Decreased the size */
     margin-bottom: 20px;
     margin-top: 40px;
     display: block;
@@ -101,7 +92,16 @@ a:hover {
 }
 
 .centered-image-5 {
-    max-width: 70%; /* Decreased the size */
+    max-width: 50%; /* Decreased the size */
+    margin-bottom: 20px;
+    margin-top: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centered-image-6 {
+    max-width: 40%; /* Decreased the size */
     margin-bottom: 20px;
     margin-top: 40px;
     display: block;

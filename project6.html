@@ -1,27 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 6 Details</title>
-    <!-- Link to your CSS, JS, and other assets if necessary -->
+    <title>Magnetic properties of tetranuclear Ni-square grid</title>
     <link rel="stylesheet" href="./project-6-details.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equations</title>
+    <style>
+        .centered {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;  /* Bold font */
+        }
+
+        .equation {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .block {
+            margin-bottom: 30px;
+        }
+    </style>
+    
 </head>
 <body>
-    <header>
-        <h1>Magnetic properties of tetranuclear nickel-thiocarbohydrazide square grid</h1>
-        <!-- You can add navigation links, etc. here -->
-    </header>
-    <main>
-        <section>
-            <h2>Project Overview</h2>
-            <p>Details about the project...</p>
-            <!-- You can add images, other sections, and any other details you want here. -->
-        </section>
-    </main>
-    <footer>
-        <!-- Maybe a back button to the main page or any other footer content -->
-        <a href="index.html">Back to main page</a>
-    </footer>
+
+<header>
+    <h1>Magnetic properties of tetranuclear Ni-square grid</h1>
+    <p>
+        Results to be published
+    </p>
+</header>
+
+<main>
+    <section class="summary-overview">
+        <h2>Summary and Overview</h2>
+        <p>
+            In the last decade, the design and synthesis of 3D polynuclear metal complexes that result from self-assembly 
+            through linking molecules in a non-covalent fashion have caught the attention of many researchers.<sup><a href="#ref1">[1]</a></sup><sup><a href="#ref2">[2]</a></sup><sup><a href="#ref3">[3]</a></sup><sup><a href="#ref4">[4]</a></sup><sup><a href="#ref5">[5]</a></sup>
+             Organic molecules obtained by the condensation of ketones (or aldehydes) and carbohydrazide or thiocarbohydrazide have 
+            previously led to the self-assembly of polynuclear metal complexes of various topologies such as square and 
+            rectangular grids.<sup><a href="#ref6">[6]</a></sup><sup><a href="#ref7">[7]</a></sup><sup><a href="#ref8">[8]</a></sup>
+        </p>
+            Ni(II) metal ions can adopt different geometries and topologies depending on the ligand and the reaction conditions, 
+            allowing a very flexible design of new polynuclear Ni(II) complexes. In this work, we report the study of the 
+            magnetic properties of a tetranuclear square grid Ni(II) resulting from the self-assembly between a thiocarbohydrazide
+            based-ligand and nickel nitrate complex 1 (Figure 1).
+        </p>
+
+        <figure>
+            <img src="./assets/picture_1_project_6.png" alt="Description of Image" class="centered-image-1"> 
+            <figcaption class="image-caption" style="text-align: center;"><b>Figure 1.</b> Crystal structure of the 
+                tetranuclear Ni(II) square grid complex 1. Lattice water and methanol molecules are omitted for clarity.</figcaption>
+        </figure>
+
+        <!-- Implementation and Results -->
+<section class="implementation-results">
+    <h2>Implementation and Results</h2>
+    <p style="font-size: 1.2rem;"><u><b>Calculation of exchange coupling constant:</b></u></p>
+    <p>
+        To better understand the magnetic behaviour of complex 1, theoretical calculations based on DFT were performed using 
+        the H-optimized crystal structure. The complex consists of four 
+        magnetically interacting Ni(II) centres and can be reasonably well described by the broken symmetry (BS)<sup><a href="#ref9">[9]</a></sup><sup><a href="#ref10">[10]</a></sup>  approach, which
+        will allow to determine the sign and magnitude of the six coupling constants J<sub>12</sub>, J<sub>13</sub>, J<sub>14</sub>, J<sub>23</sub>, J<sub>24</sub> and J<sub>34</sub>. 
+    </p>
+    <p>
+        For these calculations, we first assumed that locally all spins on each metal centre are aligned in parallel (local high 
+        spin configurations). Then, a separate solution for each of the possible spin configurations of the cluster is calculated 
+        with a positive or negative sign of the local spin on each centre. In principle, the number of spin configurations expected
+         for a complex with n magnetic centres is 2<sup>n-1</sup>. This leads to a total number of eight different spin configurations whose 
+         energies can be calculated for complex 1. Assuming a non-symmetric structure, one can therefore generate a high spin (HS)
+          configuration S = 4, four broken symmetry (BS) solutions Ms = 2 and three BS Ms = 0 solutions (Figure 2).
+    </p>
+
+    <figure>
+        <img src="./assets/picture_2_project_6.png" alt="Description of Image" class="centered-image-2"> 
+        <figcaption class="image-caption" style="text-align: center;"><b>Figure 2.</b> Possible spin configurations for complex  1.</figcaption>
+    </figure>
+
+    <p>
+        The energy of each spin configuration can be written as a linear combination of the local spin of each magnetic centre and
+         the individual exchange coupling constant resulting in a series of eight equations as follows:
+    </p>
+ 
+    
+    <div class="block">
+        <h3 class="centered">High-spin state (S = 4)</h3>
+        <p class="equation"><b>E<sub>αααα</sub></b> = -2J<sub>12</sub>(1×1) -2J<sub>13</sub>(1×1) -2J<sub>14</sub>(1×1) -2J<sub>23</sub>(1×1) -2J<sub>24</sub>(1×1) -2J<sub>34</sub>(1×1)</p>
+    </div>
+    
+    <div class="block">
+        <h3 class="centered">Single flip (M<sub>s</sub> = 2)</h3>
+        <p class="equation"><b>E<sub>αααβ</sub></b> = -2J<sub>12</sub>(1×1) -2J<sub>13</sub>(1×1) -2J<sub>14</sub>(1×(-1)) -2J<sub>23</sub>(1×1) -2J<sub>24</sub>(1×(-1)) -2J<sub>34</sub>(1×(-1))</p>
+        <p class="equation"><b>E<sub>ααβα</sub></b> = -2J<sub>12</sub>(1×1) -2J<sub>13</sub>(1×(-1)) -2J<sub>14</sub>(1×1) -2J<sub>23</sub>(1×(-1)) -2J<sub>24</sub>(1×1) -2J<sub>34</sub>((-1)×1)</p>
+        <p class="equation"><b>E<sub>αβαα</sub></b> = -2J<sub>12</sub>(1×(-1)) -2J<sub>13</sub>(1×1) -2J<sub>14</sub>(1×1) -2J<sub>23</sub>((-1)×1) -2J<sub>24</sub>((-1)×1) -2J<sub>34</sub>(1×1)</p>
+        <p class="equation"><b>E<sub>βααα</sub></b> = -2J<sub>12</sub>((-1)×1) -2J<sub>13</sub>((-1)×1) -2J<sub>14</sub>((-1)×1) -2J<sub>23</sub>(1×1) -2J<sub>24</sub>(1×1) -2J<sub>34</sub>(1×1)</p>
+    </div>
+    
+    <div class="block">
+        <h3 class="centered">Double flip (M<sub>s</sub> = 0)</h3>
+        <p class="equation"><b>E<sub>αββα</sub></b> = -2J<sub>12</sub>(1×(-1)) -2J<sub>13</sub>(1×(-1)) -2J<sub>14</sub>(1×1) -2J<sub>23</sub>((-1)×(-1)) -2J<sub>24</sub>((-1)×1) -2J<sub>34</sub>(1×(-1))</p>
+        <p class="equation"><b>E<sub>αβαβ</sub></b> = -2J<sub>12</sub>(1×(-1)) -2J<sub>13</sub>(1×1) -2J<sub>14</sub>(1×(-1)) -2J<sub>23</sub>((-1)×1) -2J<sub>24</sub>((-1)×(-1)) -2J<sub>34</sub>(1×(-1))</p>
+        <p class="equation"><b>E<sub>ααββ</sub></b> = -2J<sub>12</sub>(1×1) -2J<sub>13</sub>(1×(-1)) -2J<sub>14</sub>(1×(-1)) -2J<sub>23</sub>(1×(-1)) -2J<sub>24</sub>(1×(-1)) -2J<sub>34</sub>((-1)×(-1))</p>
+    </div>
+    
+
+
+    <p>
+        Using the ORCA quantum chemistry software and applying the previous equations, the system of linear
+         equations were solved using the singular value decomposition (SVD) approach. The following J values were calculated: 
+         J<sub>12</sub> = -92 cm<sup>-1</sup>, J<sub>23</sub> = -144 cm<sup>-1</sup>, J<sub>34</sub> = -90 cm<sup>-1</sup>, J<sub>14</sub> = -155 cm<sup>-1</sup>, and J<sub>13</sub> = J<sub>24</sub> = -1 cm<sup>-1</sup>. 
+         We thus observe
+          that the coupling constants between the diagonal nickels are much lower than those of the adjacent nickels, which is 
+          expected given the distance between them. More interestingly, all the coupling constants calculated are negative, which
+           demonstrates the presence of antiferromagnetic interactions between the nickel centres. From the calculated coupling constants, the energies 
+           and nature of the ground state of the system and its excited states can be simulated. This is achieved by direct 
+           diagonalization of the HDvV Hamiltonian and by employing the orca_eca utility of ORCA program. The magnetic sublevel spectrum 
+           of the tetranuclear species is composed of 19 states: 3 singlets (S = 0), 6 triplets (S = 1), 6 quintets (S = 2), 
+           3 seven-fold (S =3) and 1 nine-fold (S = 4) of energy. These data allow us to conclude the nature
+            of the ground state of the system, which is a singlet, S = 0, separated by 247 cm<sup>-1</sup> from the first excited state, 
+            which is S = 1.
+    </p>
+
+    <p>
+        In addition to the above analysis, we also reconstructed the theoretical magnetic susceptibility curve (blue curve, Figure
+         2) using the calculated exchange coupling constants and using the Easy-spin program. These data were superimposed with
+          those from the experimental measurements (red curve, Figure 2). This highlights the very good agreement between theory
+           and experiment. It also confirms the validity of the results obtained from the calculations concerning both the 
+           fundamental spin state (singlet, S =0) and the nature of the magnetic interactions (antiferromagnetic).
+    </p>
+
+    <figure>
+        <img src="./assets/picture_3_project_6.png" alt="Description of Image" class="centered-image-3"> 
+        <figcaption class="image-caption" style="text-align: center;"><b>Figure 2.</b> Evolution of the product χT as a 
+        function of temperature: Comparison between experimental (◦◦◦) and theoretical (─) data for the complex 1.</figcaption>
+    </figure>
+
+    
+
+<!-- Conclusion -->
+<section class="conclusion">
+    <h2>Conclusion</h2>
+    <p>
+        The self-assembly between a thiocarbohydrazide based-ligand and nickel nitrate yielded the tetranuclear Ni(II) complex 1.
+        The X-ray crystal structure revealed a boat-like geometry within the Ni-S-Ni plane featuring a square grid geometry with 
+        four Ni(II) ions bridged by four sulphur atoms. The magnetic interaction between Ni(II) was proven to be 
+        antiferromagnetic with weak a J between diagonal Ni(II) (J<sub>13</sub> and J<sub>24</sub>) as expected due to the long Ni-Ni distance. Furthermore,
+         and based on previous magneto-structural correlations on similar systems, antiferromagnetic coupling was expected due to 
+         the large values of the Ni-S-Ni angles (between 151.2 and 158.4°), in accordance with experimental results.<sup><a href="#ref11">[11]</a></sup><sup><a href="#ref12">[12]</a></sup><sup><a href="#ref13">[13]</a></sup><sup><a href="#ref14">[14]</a></sup> 
+         BS-DFT 
+         calculations were in complete agreement with experimental results showing an antiferromagnetic coupling for all the six 
+         theoretical J’s, featuring a weak coupling for diagonal exchange coupling constants (J<sub>13</sub> and J<sub>24</sub>). Finally, we were able 
+         to reconstruct the theoretical magnetic susceptibility curve, which is in excellent agreement with the experimental one. 
+    </p>
+
+<!-- References -->
+<section class="references-list">
+    <h2>References</h2>
+    <ol>
+        <li id="ref1"><a href="https://doi.org/10.1039/b107118c" target="_blank">Winpenny, R. E. P. Serendipitous Assembly of Polynuclear Cage Compounds. J. Chem. Soc. Dalton Trans. 2002, No. 1, 1–10.</a></li>
+        <li id="ref2"><a href="https://doi.org/10.1039/b008684n" target="_blank">Fujita, M.; Umemoto, K.; Yoshizawa, M.; Fujita, N.; Kusukawa, T.; Biradha, K. Molecular Paneling via Coordination. Chem. Commun. 2001, No. 6, 509–518.</a></li>
+        <li id="ref3"><a href="https://doi.org/10.1038/383145a0" target="_blank">Thomas, L.; Lionti, F.; Ballou, R.; Gatteschi, D.; Sessoli, R.; Barbara, B. Macroscopic Quantum Tunnelling of Magnetization in a Single Crystal of Nanomagnets. Nature 1996, 383 (6596), 145–147.</a></li>
+        <li id="ref4"><a href="https://doi.org/10.1103/PhysRevLett.76.3830" target="_blank">Friedman, J. R.; Sarachik, M. P.; Tejada, J.; Ziolo, R. Macroscopic Measurement of Resonant Magnetization Tunneling in High-Spin Molecules. Phys. Rev. Lett. 1996, 76 (20), 3830–3833.</a></li>
+        <li id="ref5"><a href="https://doi.org/10.1007/430_022" target="_blank">Aromí, G.; Brechin, E. K. Synthesis of 3d Metallic Single-Molecule Magnets. In Single-Molecule Magnets and Related Phenomena; Winpenny, R., Ed.; Structure and Bonding; Springer-Verlag: Berlin/Heidelberg, 2006; Vol. 122, pp 1–67.</a></li>
+        <li id="ref6"><a href="https://doi.org/10.1016/j.inoche.2013.10.048" target="_blank">Zhang, L.; Wang, J.-J.; Xu, G.-C. The [2×2] Grid Tetranuclear Fe(II) and Mn(II) Complexes: Structure and Magnetic Properties. Inorg. Chem. Commun. 2014, 39, 66–69.</a></li>
+        <li id="ref7"><a href="https://doi.org/10.1016/j.poly.2013.05.056" target="_blank">Jana, A.; Konar, S.; Das, K.; Ray, S.; Golen, J. A.; Rheingold, A. L.; Fallah, M. S. [El; Mukherjee, S.; Gupta, S.; Pombeiro, A. J. L.; Kar, S. K. A [2×2] Cu4 Molecular Grid and a Mn5 Cluster Derived from a 1-(2-Pyridyl)Pyrazole Based Polytopic Ligand – Synthesis, Structure, Magnetic Properties and Catalytic Activity in the Allylic Oxidation of Cyclohexene. Polyhedron 2013, 62, 51–60.</a></li>
+        <li id="ref8"><a href="https://doi.org/10.1021/ic401445u" target="_blank">Sato, H.; Miya, L.; Mitsumoto, K.; Matsumoto, T.; Shiga, T.; Newton, G. N.; Oshio, H. Multiredox Active [3 × 3] Copper Grids. Inorg. Chem. 2013, 52 (17), 9714–9716.</a></li>
+        <li id="ref9"><a href="https://doi.org/10.1039/B614424A" target="_blank">Isele, K.; Gigon, F.; Williams, A. F.; Bernardinelli, G.; Franz, P.; Decurtins, S. Synthesis, Structure and Properties of {M 4 O 4 } Cubanes Containing Nickel( II ) and Cobalt( II ). Dalton Trans 2007, No. 3, 332–341.</a></li>
+        <li id="ref10"><a href="https://doi.org/10.1021/ic300535d" target="_blank">Das, A.; Klinke, F. J.; Demeshko, S.; Meyer, S.; Dechert, S.; Meyer, F. Reversible Solvatomagnetic Effect in Novel Tetranuclear Cubane-Type Ni4 Complexes and Magnetostructural Correlations for the [Ni4(Μ3-O)4] Core. Inorg. Chem. 2012, 51 (15), 8141–8149.</a></li>
+    </ol>
+    
+</section>
+
+</main>
+
+<footer>
+        <a href="index.html#projects" class="back-link">Back to Main Page</a>
+</footer>
+
+<button id="scrollTopBtn" class="scroll-top-btn" onclick="scrollToTop()">⬆️</button>
+
+    <script>
+       function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+// Code to show the button after scrolling 100 pixels
+window.onscroll = function() {
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollTopBtn.style.display = "block";
+    } else {
+        scrollTopBtn.style.display = "none";
+    }
+} 
+    </script>
+
 </body>
 </html>

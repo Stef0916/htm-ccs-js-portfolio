@@ -416,6 +416,15 @@ article .icon {
     max-height: 800px;
 }
 
+.details-container {
+    box-shadow: 16px -10px 10px rgba(0, 0, 0, 0.1); /* Horizontal offset, vertical offset, blur radius, shadow color */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.details-container:hover {
+    box-shadow: 16px 16px 15px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover for a subtle lift effect */
+}
+
 
 /* PROJECT SECTION */
 
@@ -508,6 +517,14 @@ article .icon {
     margin-top: -20px;  /* Adjust this value based on how much you want to move it up */
 }
 
+.large-project, .project-small {
+    box-shadow: 16px -10px 10px rgba(0, 0, 0, 0.1); /* Horizontal offset, vertical offset, blur radius, shadow color */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.large-project:hover, .project-small:hover {
+    box-shadow: 16px 16px 15px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover for a subtle lift effect */
+}
 
 /* CONTACT */
 
