@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicting the exchange coupling in copper complexes</title>
+    <link rel="stylesheet" href="./project-2-details.css">
+    
+</head>
+<body>
+
+<header>
+    <h1>Predicting the exchange coupling in copper complexes</h1>
+    <p>
+        <a href="https://github.com/Stef0916/3D-correlation.git" target="_blank">GitHub-project</a>
+    </p>
+</header>
+
+<main>
+    <section class="summary-overview">
+        <h2>Summary and Overview</h2>
+        <p>
+            The magnetic characteristics of dinuclear copper(II) complexes have been extensively explored using both 
+            experimental and computational methods.<sup><a href="#ref1">[1]</a></sup><sup><a href="#ref2">[2]</a></sup><sup><a href="#ref3">[3]</a></sup><sup><a href="#ref4">[4]</a></sup><sup><a href="#ref5">[5]</a></sup><sup><a href="#ref6">[6]</a></sup><sup><a href="#ref7">[7]</a></sup><sup><a href="#ref8">[8]</a></sup><sup><a href="#ref9">[9]</a></sup> 
+            Various factors influence the magnetic interaction of paramagnetic centres in close vicinity. Notably, 
+            structural changes and exchange interactions are closely related. For example, subtle changes in the metal 
+            centre's distances and angles can cause significant alterations in the sign and magnitude of J. 
+        </p>
+        <p>
+            Hatfield and Hodgson's seminal work<sup><a href="#ref9">[9]</a></sup> established a link between the Cu-OH-Cu (&theta;) angle and the exchange coupling 
+            constant J in certain bis-(&mu;)-hydroxo copper(II) dimers [Cu(OH)<sub>2</sub>L<sub>2</sub>]<sup>2+</sup>. Current 
+            knowledge confirms that altering geometrical parameters around the metal centre can modify a complex's magnetic properties.
+        </p>
+        <p>
+            Quantum chemistry studies based on DFT methods from Ruiz and co-workers supported the results observed by Hatfield and Hodgson
+             and also revealed that the out-of-plane angle (&alpha;) of bridging ligands, such as hydroxo, is equally crucial
+             as the &alpha; angle.<sup><a href="#ref2">[2]</a></sup><sup><a href="#ref3">[3]</a></sup> A pronounced &alpha; angle often corresponds to a reduced &alpha; angle, leading to ferromagnetic coupling. 
+             This &alpha; angle, especially in bis-&mu;-hydroxo complexes, is influenced by hydrogen bonding with adjacent counterions. 
+             <b>However, no formal correlation between &theta;, &alpha; and J has been established using quantum chemical approaches. </b>
+        </p>
+    </section>
+
+        <!-- Implementation and Results -->
+<section class="implementation-results">
+    <h2>Implementation and Results</h2>
+    <p>
+        Discrepancies between computed and experimental J values seem more important when considering &mu;-hydroxo bridging ligands, 
+        showing that a suitable description of the magnetic properties for these systems is only possible if &alpha; is appropriately 
+        included. This latter observation is a major concern because the X-ray diffraction technique does not adequately identify 
+        the positions of the hydrogen atoms. It becomes clear that to achieve a more precise description of the magnetic properties 
+        of metal complexes featuring a bis-&mu;-hydroxo bridging ligand, the position of the hydroxo hydrogen must be properly 
+        considered. Therefore, a new correlation connecting the &alpha; and &theta; angles with the J<sub>calc</sub> was established using complex <b>1</b> as a 
+        reference (Figure 1). 
+    </p>    
+    
+    <figure>
+        <img src="./assets/picture_1_project_2.png" alt="Description of Image" class="centered-image"> 
+        <figcaption class="image-caption" style="text-align: center;"><b>Figure 1.</b> Quantum refined crystal structure at 10 K (QR) of complex 1. Hydrogen atoms from carbon centres were removed for clarity.</figcaption>
+    </figure>
+
+    <p>    
+        Model complexes featuring seven &theta; angles from 95˚ to 101˚ were designed, and the &alpha; angle was scanned 
+        from 0˚ to 60˚. The computed J values were all extracted from the previous BS calculations using model complexes, the TPSSh 
+        functional and def2-TZVP basis set, and a three-dimension correlation (3D) was obtained (Equation I, Figure 2) (see GitHub link for the code implementation):
+        <div class="equation">
+            <b>\[ J_{\text{calc}} = 7.50 \times 10^3 - 9.78 \times 10^{-1} \theta - 7.49 \times 10^1 \alpha + 1.81 \times 10^{-1} \theta^2 - 6.39 \times 10^{-3} \theta^2 \alpha - 3.70 \times 10^{-4} \theta^2 \alpha^2 - 4.22 \alpha^2 - 7.95 \times 10^{-2} \alpha^2 \theta + 1.46 \theta \alpha \]</b>
+        </div>
+        
+    </p>
+
+    <section class="project-image">
+        <img src="./assets/main_picture_project_2.png" alt="Main image of the project" class="centered-image-1">
+        <figcaption class="image-caption-1" style="text-align: center;"><b>Figure 2.</b> Three-dimension correlation of the Cu-OH-Cu (&theta;, ˚) and out-of-plane angles (&alpha;, ˚) with the calculated exchange coupling constant J (J<sub>calc</sub>, cm<sup>-1</sup>) using complex <b>1</b> as a reference model.</figcaption>
+    </section>
+
+    <p>
+        As previously discussed, the exact position of the out-of-plane (&alpha;) angle cannot be precisely known due to the intrinsic 
+        limitations of X-ray diffraction techniques hindering the routinary resolution of the hydrogen atom. Therefore, the 
+        strategy is to use the experimental values of both the Cu-OH-Cu angle (&theta;) and the exchange coupling constant (J<sub>exp</sub>) 
+        to estimate the out-of-plane (&alpha;) angle using equation. After extracting the value of &alpha; from the 3D equation, 
+        we use it to change the out-of-plane angle within the crystal structures of a series of selected bis-&mu;-hydroxo 
+        dinuclear copper(II) complexes obtained from the literature. Then, the computed J using the fitted 3D &alpha; value (J<sub>3D</sub>) 
+        is extracted using BS-DFT computations. Finally, we calculated J using the X-ray-determined value of &alpha;  (J<sub>Xray</sub>) and 
+        compared it to the value obtained using the 3D &alpha; angle (J<sub>3D</sub>) to evaluate the performance of the 3D correlation. To 
+        assess the performance of the 3D correlation to predict the experimental exchange coupling constant, the absolute difference 
+        (AD), the absolute percentage deviations (APD), the mean absolute difference (MAD) and the mean absolute percentage (MADP) deviation were used (Table 1).
+    </p>
+
+    <table border="1" class="centered-table">
+        <caption><b>Table 1.</b> Experimental (J<sub>exp</sub>, cm<sup>-1</sup>) and calculated (J<sub>X-ray</sub> and J<sub>3D</sub>, cm<sup>-1</sup>) exchange coupling constants with their 
+            respective absolute differences (AD<sub>X-ray</sub> and AD<sub>SD</sub>), absolute percentage deviations (APD<sub>X-ray</sub> and AD<sub>3D</sub>), 
+            mean absolute differences (MAD) and mean absolute percentage deviations (MAPD) in cm<sup>-1</sup>, for the series of 
+            selected bis-&mu;-hydroxo copper(II) complexes</caption>
+        <thead>
+            <tr>
+                <th>Complexes</th>
+                <th>J<sub>exp</sub></th>
+                <th>J<sub>X-ray</sub></th>
+                <th>J<sub>3D</sub></th>
+                <th>AD<sub>X-ray</sub></th>
+                <th>AD<sub>3D</sub></th>
+                <th>APD<sub>X-ray</sub></th>
+                <th>APD<sub>3D</sub></th>
+                <th>Reference</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2</td>
+                <td>5</td>
+                <td>-10</td>
+                <td>11</td>
+                <td>15</td>
+                <td>6</td>
+                <td>300</td>
+                <td>120</td>
+                <td>This work</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>74</td>
+                <td>132</td>
+                <td>65</td>
+                <td>58</td>
+                <td>9</td>
+                <td>78</td>
+                <td>12</td>
+                <td>This work</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>21</td>
+                <td>64</td>
+                <td>17</td>
+                <td>43</td>
+                <td>4</td>
+                <td>205</td>
+                <td>19</td>
+                <td>This work</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>10</td>
+                <td>145</td>
+                <td>6</td>
+                <td>135</td>
+                <td>4</td>
+                <td>1350</td>
+                <td>40</td>
+                <td>This work</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>11</td>
+                <td>36</td>
+                <td>1</td>
+                <td>25</td>
+                <td>10</td>
+                <td>227</td>
+                <td>91</td>
+                <td>This work</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>-152</td>
+                <td>-572</td>
+                <td>-144</td>
+                <td>420</td>
+                <td>8</td>
+                <td>276</td>
+                <td>5</td>
+                <td>This work</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>-172</td>
+                <td>-419</td>
+                <td>-226</td>
+                <td>247</td>
+                <td>54</td>
+                <td>144</td>
+                <td>31</td>
+                <td>This work</td>
+            </tr>
+            <tr>
+                <td>ICISUJ</td>
+                <td>92</td>
+                <td>758</td>
+                <td>110</td>
+                <td>666</td>
+                <td>18</td>
+                <td>724</td>
+                <td>20</td>
+                <td><li id="ref13"><a href="https://doi.org/10.1039/B515889C" target="_blank"></a></li></td>
+            </tr>
+        <tr>
+            <td>OBUSUC</td>
+            <td>15</td>
+            <td>44</td>
+            <td>14</td>
+            <td>29</td>
+            <td>1</td>
+            <td>193</td>
+            <td>7</td>
+            <td><li id="ref14"><a href="https://doi.org/10.1139/cjc-2014-0186" target="_blank"></a></li></td>
+        </tr>
+        <tr>
+            <td>OBUTEN</td>
+            <td>8</td>
+            <td>22</td>
+            <td>7</td>
+            <td>14</td>
+            <td>1</td>
+            <td>175</td>
+            <td>13</td>
+            <td><li id="ref15"><a href="https://doi.org/10.1139/cjc-2014-0186" target="_blank"></a></li></td>
+        </tr>
+        <tr>
+            <td>OHUGUU</td>
+            <td>22</td>
+            <td>95</td>
+            <td>22</td>
+            <td>73</td>
+            <td>0</td>
+            <td>332</td>
+            <td>0</td>
+            <td><li id="ref16"><a href="https://doi.org/10.1039/B918287J" target="_blank"></a></li></td>
+        </tr>
+        <tr>
+            <td>KEXVUE</td>
+            <td>73</td>
+            <td>134</td>
+            <td>79</td>
+            <td>61</td>
+            <td>6</td>
+            <td>84</td>
+            <td>8</td>
+            <td><li id="ref17"><a href="https://doi.org/10.1016/S0020-1693(00)80483-1" target="_blank"></a></li></td>
+        </tr>
+        <tr>
+            <td>OBUSOW</td>
+            <td>12</td>
+            <td>50</td>
+            <td>3</td>
+            <td>38</td>
+            <td>9</td>
+            <td>317</td>
+            <td>75</td>
+            <td><li id="ref18"><a href="https://doi.org/10.1139/cjc-2014-0186" target="_blank"></a></li></td>
+        </tr>
+        <tr>
+            <td>YOSFIW</td>
+            <td>117</td>
+            <td>-279</td>
+            <td>84</td>
+            <td>396</td>
+            <td>33</td>
+            <td>338</td>
+            <td>28</td>
+            <td><li id="ref19"><a href="https://doi.org/10.1246/bcsj.82.358" target="_blank"></a></li></td>
+        </tr>
+        <tr>
+            <td>MEVJAY</td>
+            <td>74</td>
+            <td>53</td>
+            <td>70</td>
+            <td>21</td>
+            <td>4</td>
+            <td>28</td>
+            <td>5</td>
+            <td><li id="ref20"><a href="https://doi.org/10.1016/S0020-1693(01)00613-2" target="_blank"></a></li></td>
+        </tr>
+        <tr>
+            <td>EBEFEX</td>
+            <td>-8</td>
+            <td>121</td>
+            <td>4</td>
+            <td>129</td>
+            <td>12</td>
+            <td>1613</td>
+            <td>150</td>
+            <td><li id="ref21"><a href="https://doi.org/10.1016/j.ica.2004.01.039" target="_blank"></a></li></td>
+        </tr>
+        <tr>
+            <td>XMPYCU</td>
+            <td>-101</td>
+            <td>-139</td>
+            <td>-101</td>
+            <td>38</td>
+            <td>0</td>
+            <td>38</td>
+            <td>0</td>
+            <td><li id="ref22"><a href="https://doi.org/10.1021/ic50135a001" target="_blank"></a></li></td>
+        </tr>
+        <tr>
+            <td>CUXJEK</td>
+            <td>-45</td>
+            <td>-131</td>
+            <td>-55</td>
+            <td>86</td>
+            <td>10</td>
+            <td>191</td>
+            <td>22</td>
+            <td><li id="ref23"><a href="https://doi.org/10.1002/anie.198500571" target="_blank"></a></li></td>
+        </tr>
+        <tr>
+            <td>QAFTIB</td>
+            <td>42</td>
+            <td>139</td>
+            <td>58</td>
+            <td>97</td>
+            <td>16</td>
+            <td>231</td>
+            <td>38</td>
+            <td><li id="ref24"><a href="https://doi.org/10.1016/S0020-1693(02)01069-1" target="_blank"></a></li></td>
+        </tr>
+        <tr>
+            <td>PEMPEC10</td>
+            <td>57</td>
+            <td>125</td>
+            <td>75</td>
+            <td>68</td>
+            <td>18</td>
+            <td>119</td>
+            <td>32</td>
+            <td><li id="ref25"><a href="https://doi.org/10.1021/ic00105a027" target="_blank"></a></li></td>
+        </tr>
+            <tr>
+                <td>MAD</td>
+                <td>-</td>
+                <td>132</td>
+                <td>11</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>MAPD</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>353</td>
+                <td>35</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <p>
+        The determination of the AD shows that using the 3D correlated &alpha; value significantly improves the exchange constant's 
+        calculated values, reproducing the magnetic interaction's nature and also moving towards a quantitative prediction of J. 
+        For instance, the <b>ICISUJ</b> complex shows an AD<sub>X-ray</sub> of 666 cm<sup>-1</sup>, with a value of J<sub>X-ray</sub> = 758 cm<sup>-1</sup> that is quite far off 
+        from the experimental one of J<sub>exp</sub> = 92 cm<sup>-1</sup>. However, if the &alpha; angle is now adjusted with the one extracted from the 3D 
+        correlation, the AD<sub>3D</sub> decreases drastically to a value of 18 cm<sup>-1</sup>. This shows the significant improvement of the J 
+        prediction by taking into account not only the &theta; angle, as is usually the case with the Hatfield and Hodgson correlation,
+         but also the &alpha; angle. This is also reflected in the mean absolute differences since the high value of MAD<sub>X-ray</sub> of 132 
+         cm<sup>-1</sup> suggests a significant difference between the experimental and calculated results, while a relatively low MAD<sub>3D</sub> 
+         of 11 cm<sup>-1</sup> is obtained by using the 3D correlation. The same rationale applies when looking at the resulting ADP values, 
+         which are systematically lower when the &alpha; angle is extracted from the 3D correlation for all complexes listed in Table 1 and Figure 3.
+    </p>
+
+    <section class="project-image">
+        <img src="./assets/picture_3_project_2.png" alt="Main image of the project" class="centered-image-2">
+        <figcaption class="image-caption-3" style="text-align: justify;"><b>Figure 3.</b> Top: Absolute 
+            differences (cm<sup>-1</sup>) between experimental and calculated J values (cm<sup>-1</sup>) 
+            using the α angle from the X-ray crystal structure (AD(X-ray), blue bars) and from the 3D 
+            correlation (AD(3D), orange bars). Bottom: Absolute percentage deviation between experimental 
+            and calculated J values (cm<sup>-1</sup>) using the α angle from the X-ray crystal structure 
+            (APD(X-ray), blue bars) and from the 3D correlation (APD(3D), orange bars).
+            </p>
+            </figcaption>
+    </section>
+    
+</section>
+
+<!-- Conclusion -->
+<section class="conclusion">
+    <h2>Conclusion</h2>
+    <p>
+        It becomes clear that the out-of-plane angle has to be accounted for a more precise prediction of 
+        the J values in bis-&mu;-hydroxo dinuclear copper(II) complexes. Combining the two main geometrical 
+        parameters that influence the sign and value of J, we constructed a three-dimension correlation 
+        between &alpha;, &theta; and J. This correlation significantly improves the prediction of the J values when &alpha; 
+        is extracted and adequately corrected in the crystal structure.
+    </p>
+
+    <!-- Perspectives -->
+<section class="perspectives">
+    <h2>Perspectives</h2>
+    <p>
+        Magnetic properties are the consequence of the individual contribution of the metal ions, ligands, 
+        and counterions, and the final geometry resulting from the ligand-metal coordination. Thus, a 
+        deep understanding of the micro- and macroscopic factors that govern the magnetic properties of 
+        polynuclear metal complexes is crucial. Furthermore, it is the first step towards a better 
+        understanding of the relationship between structure and magnetism, opening the door for better 
+        rationalizing reaction mechanisms. Therefore, realizing how the structure shapes the magnetic 
+        interaction in small systems is vital in predicting the magnetic behaviour of larger and more 
+        complicated frameworks. Moving forward, we need to dig deeper into the magnetic mechanisms using 
+        quantum computing. Also, there's a growing interest in magneto-structural correlations beyond 
+        just dinuclear copper complexes because of their potential application in magnetism and
+        bioinspired design of novel catalyst.
+    </p>
+</section>
+<!-- References -->
+<section class="references">
+    <h2>References</h2>
+    <ol>
+        <li id="ref1">Kahn, O. Molecular Magnetism; VCH: New York, NY, 1993</li>
+        
+        <li id="ref2"><a href="https://doi.org/10.1021/ja961199b" target="_blank">Ruiz, E.; Alemany, P.; Alvarez, S.; Cano, J. Toward the Prediction of Magnetic Coupling in Molecular Systems: Hydroxo- and Alkoxo-Bridged Cu(II) Binuclear Complexes. <i>J. Am. Chem. Soc.</i> 1997, 119 (6), 1297–1303.</a></li>
+
+        <li id="ref3"><a href="https://doi.org/10.1021/ic970310r" target="_blank">Ruiz, E.; Alemany, P.; Alvarez, S.; Cano, J. Structural Modeling and Magneto−Structural Correlations for Hydroxo-Bridged Copper(II) Binuclear Complexes. <i>Inorg. Chem.</i> 1997, 36 (17), 3683–3688.</a></li>
+        
+        <li id="ref4"><a href="https://doi.org/10.1002/jcc.21788" target="_blank">Ruiz, E. Exchange Coupling Constants Using Density Functional Theory: Long-Range Corrected Functionals. <i>J. Comput. Chem.</i> 2011, 32 (9), 1998–2004.</a></li>
+        
+        <li id="ref5"><a href="https://doi.org/10.1007/b97942" target="_blank">Ruiz, E. Theoretical Study of the Exchange Coupling in Large Polynuclear Transition Metal Complexes Using DFT Methods. In <i>Principles and Applications of Density Functional Theory in Inorganic Chemistry II</i>; Kaltsoyannis, N., McGrady, J. E., Eds.; Structure and Bonding; Springer: Berlin, Heidelberg, 2004; pp 71–102.</a></li>
+        
+        <li id="ref6"><a href="https://doi.org/10.1021/cr300500z" target="_blank">Malrieu, J. P.; Caballol, R.; Calzado, C. J.; de Graaf, C.; Guihéry, N. Magnetic Interactions in Molecules and Highly Correlated Materials: Physical Content, Analytical Derivation, and Rigorous Extraction of Magnetic Hamiltonians. <i>Chem. Rev.</i> 2014, 114 (1), 429–492.</a></li>
+        
+        <li id="ref7"><a href="https://doi.org/10.1002/ejic.201700935" target="_blank">Julve, M.; Gleizes, A.; Chamoreau, L. M.; Ruiz, E.; Verdaguer, M. Antiferromagnetic Interactions in Copper(II) Μ‐Oxalato Dinuclear Complexes: The Role of the Counterion. <i>Eur. J. Inorg. Chem.</i> 2018, 2018 (3–4), 509–516.</a></li>
+        
+        <li id="ref8"><a href="https://doi.org/10.1021/ic50107a032" target="_blank">Barnes, J. A.; Hodgson, D. J.; Hatfield, W. E. Magnetic Properties of a Series of Hydroxo-Bridged Complexes of 2,2’-Dipyridyl and Copper(II). <i>Inorg. Chem.</i> 1972, 11 (1), 144–148.</a></li>
+        
+        <li id="ref9"><a href="https://doi.org/10.1021/ic50163a019" target="_blank">Crawford, V. H.; Richardson, H. Wayne.; Wasson, J. R.; Hodgson, D. J.; Hatfield, W. E. Relation between the Singlet-Triplet Splitting and the Copper-Oxygen-Copper Bridge Angle in Hydroxo-Bridged Copper Dimers. <i>Inorg. Chem.</i> 1976, 15 (9), 2107–2110.</a></li>
+    </ol>
+</section>
+
+</main>
+
+<footer>
+        <a href="index.html#projects" class="back-link">Back to Main Page</a>
+</footer>
+
+<button id="scrollTopBtn" class="scroll-top-btn" onclick="scrollToTop()">⬆️</button>
+
+    <script>
+       function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+// Code to show the button after scrolling 100 pixels
+window.onscroll = function() {
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollTopBtn.style.display = "block";
+    } else {
+        scrollTopBtn.style.display = "none";
+    }
+} 
+    </script>
+
+</body>
+</html>
+

@@ -214,6 +214,11 @@ section {
     height: 2rem;
 }
 
+.icon.arrow {
+    width: 50px; /* Adjust this to your desired width */
+    height: 50px; /* Adjust this to your desired height */
+}
+
 /* BUTTONS */
 
 .btn-container {
@@ -265,7 +270,22 @@ section {
 /* ABOUT SECTION */
 
 #about {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 100vh;           /* Full viewport height. Adjust as needed */
+    flex-direction: column;  /* Stack children vertically */
     position: relative;
+    margin-bottom: 200px;
+    margin-top: 200px;
+}
+
+#about .icon {
+    width: 50px; /* adjust this as needed */
+    height: 50px; /* adjust this as needed */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about-containers {
@@ -291,11 +311,11 @@ section {
 .arrow {
     position: absolute;
     right: -5rem;
-    bottom: 2.5rem;
+    bottom: 1rem;
 }
 
 .details-container {
-    padding: 1.5rem;
+    padding: 1.0rem;
     flex: 1;
     background: white;
     border-radius: 2rem;
@@ -317,12 +337,30 @@ section {
     height: 400px;
     width: 400px;
     margin: auto 0;
+    position: relative;
+    top: -10%; /* Adjust as needed */
+    left: 5%; /* Adjust as needed */
 }
 
 /* EXPERIENCE SECTION */
 
 #experience {
     position: relative;
+    margin-bottom: 200px;
+}
+
+#experience .experience-sub-title {
+    margin-top: 3px !important;
+}
+
+#experience {
+    padding-top: 4vh;
+    padding-bottom: 4vh; /* Add some bottom padding */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 70vh; /* Use min-height instead of height */
+    margin: 2rem 10rem 6rem; /* Adjust margin and add extra bottom margin */
 }
 
 .experience-sub-title {
@@ -334,7 +372,7 @@ section {
 
 .experience-details-container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-direction: column;
 }
 
@@ -345,94 +383,171 @@ section {
     flex-direction: row;
     gap: 1.5rem;
     justify-content: left;
-    vertical-align: middle;
+    vertical-align: left;
+    margin-bottom: 16px;
+}
+
+.article-container ul {
+    padding-left: 20px;  /* Adjust the value as needed */
+}
+
+.article-container li {
+    padding-left: 10px;  /* Adjust the value as needed */
 }
 
 .article {
     display: flex;
-    width: 6rem;
+    width: 8rem;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1.5rem;
 }
 
 article .icon {
     cursor: default;
 }
 
-/* PROJECTS */
+.details-container {
+    height: auto; /* This will take up only as much space as required by the content. */
+    max-height: 800px; /* This limits the maximum height, you can adjust as per your needs. */
+}
+
+.article-container {
+    height: auto;
+    max-height: 800px;
+}
+
+
+/* PROJECT SECTION */
 
 #projects {
     position: relative;
+    padding-top: 4vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 26rem 10rem;
+    margin-bottom: 300px;
 }
 
-.color-container {
+#projects .icon.arrow {
+    /* Your desired styles for positioning the arrow */
+    bottom: -30%; /* This is just an example value; adjust as needed */
+    left: 106%;
+    transform: translateX(-50%); /* This will ensure it stays centered horizontally */
+    /* Add any other styles or modifications you want */
+}
+
+
+/* Common style for all projects */
+.details-container.color-container {
     border-color: rgb(163, 163, 163);
     background: rgb(250, 250, 250);
+    padding: 1.5rem;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    min-width: 200px; 
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem; /* give some space around each project */
 }
 
-.project-img {
-    border-radius: 2rem;
+.about-containers {
+    display: flex;
+    justify-content: center; /* This centers the projects in the row */
+    flex-wrap: wrap; /* This allows the projects to wrap to the next line if there isn't enough space */
+}
+
+.project-footer {
+    margin-top: auto;
+}
+
+.project-img, .project-img-small {
+    border-radius: 0rem;
     width: 100%;
-    height: 40%;
+    height: 100%;
 }
 
 .project-title {
-    margin: 2rem;
+    margin: 1rem;
     color: black;
-    text-align: center;
-    margin-left: 0.05rem;
-    margin-right: 0.05rem;
-    font-size: 1.2rem;
+    font-size: 20px;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .project-btn {
     color: black;
     border-color: rgb(163, 163, 163);
-}
-
-.project-btn {
     position: relative;
+    display: inline-block;
 }
 
-/* CONTAC */
+/* Ensures each details-container is a flex container oriented in a column direction */
+.details-container {
+    display: flex;
+    flex-direction: column;
+    height: 90%;  /* Ensures the container fills its parent's height */
+}
+
+/* Main content of the container takes up all available space */
+.article-container {
+    flex: 1; 
+}
+
+/* Resets any margins for the project-footer to ensure the button sits right at the bottom */
+.project-footer {
+    margin: 0;
+}
+
+.experience-sub-title {
+    margin-top: -20px;  /* Adjust this value based on how much you want to move it up */
+}
+
+
+/* CONTACT */
 
 #contact {
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: 70vh;
-}
-
-.contact-info-upper-container {
+  }
+  
+  .contact-info-upper-container {
     display: flex;
     justify-content: center;
     border-radius: 2rem;
     border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, blue163);
+    border-color: rgb(163, 163, 163);
     background: (250, 250, 250);
     margin: 2rem auto;
     padding: 0.5rem;
-}
-
-.contact-info-container {
+  }
+  
+  .contact-info-container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
     margin: 1rem;
-}
-
-.contact-info-container p{
+  }
+  
+  .contact-info-container p {
     font-size: larger;
-}
-
-.contact-info {
+  }
+  
+  .contact-icon {
     cursor: default;
-}
-
-.email-icon {
+  }
+  
+  .email-icon {
     height: 2.5rem;
-}
+  }
 
 /* FOOTER SEXTION */
 
@@ -444,4 +559,3 @@ footer {
 footer p {
     text-align: center;
 }
-

@@ -1,0 +1,88 @@
+/* Reset some basic styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    max-width: 1200px; /* Increased the max-width */
+    margin: 2em auto;
+    background-color: #fff;
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+}
+
+footer {
+    margin-top: 2em;
+    text-align: center;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.centered-image {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px; /* This will add 30 pixels of space above the image */
+    max-width: 100%; /* Decreased the size */
+}
+
+h2 {
+    background-color: rgba(0, 0, 0, 0.6);  /* 60% opaque black */
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    margin: 50px 0;  /* Added space between the titles */
+}
+
+.scroll-top-btn {
+    position: fixed;     /* Fix the button to a specific position on the screen */
+    bottom: 20px;        /* Position the button 20 pixels from the bottom of the screen */
+    right: 20px;         /* Position the button 20 pixels from the right of the screen */
+    background-color: #333; /* Button background color */
+    color: white;        /* Arrow color */
+    border: none;        /* Remove border */
+    border-radius: 50%;  /* Make it round */
+    padding: 10px 15px;  /* Button padding */
+    font-size: 20px;     /* Arrow size */
+    cursor: pointer;     /* Show hand cursor on hover */
+    opacity: 0.7;        /* Make it slightly transparent */
+    display: none;       /* Initially hide it */
+    transition: opacity 0.3s; /* Smooth transition for hover effects */
+}
+
+.scroll-top-btn:hover {
+    opacity: 1; /* Fully visible on hover */
+}
+
+.back-link {
+    display: block;   /* Makes the link block level, so it takes up the full width of its container */
+    margin-top: -30px; /* Moves the link up by 20 pixels; adjust the value as needed */
+    padding: 10px 0; /* Adds some space around the text for easier clicking */
+    text-align: center; /* Centers the text horizontally */
+}
+
