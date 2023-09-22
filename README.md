@@ -4,9 +4,9 @@ Welcome to my responsive profile. This project showcases my web development skil
 
 ## Preview
 
-[Live Demo](https://your-live-demo-link-if-you-have-one)
+[Live Demo](https://stefani-gamboa-portfolio.netlify.app/)
 
-![Profile Screenshot](https://link-to-your-screenshot-if-you-have-one)
+![Profile Screenshot](./assets/Screenshot_1.png)
 
 ## Features
 
@@ -21,26 +21,7 @@ Welcome to my responsive profile. This project showcases my web development skil
 
 ## Credits
 
-Special thanks to **Ade-mir**, from whose work I drew inspiration for this profile. Credit to their original project can be found [here](https://link-to-Ade-mir's-project). It's essential to recognize and appreciate the efforts and creativity of fellow developers. They played a pivotal role in shaping my understanding and approach towards this project.
-
-## How to Use
-
-1. **Clone this Repository**:
-    ```bash
-    git clone https://github.com/your-username/your-repo-name.git
-    ```
-
-2. **Navigate to the Directory**:
-    ```bash
-    cd your-repo-name
-    ```
-
-3. **Open in Browser**: 
-    Simply double-click the `index.html` file to view in your preferred browser.
-
-## Contribution
-
-If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request. All contributions are welcome.
+Special thanks to **Ade-mir**, from whose work I drew inspiration for this profile. Credit to their original project can be found [here](https://github.com/Ade-mir).
 
 ## License
 
