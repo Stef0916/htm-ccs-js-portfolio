@@ -22,7 +22,3 @@ Welcome to my responsive profile. This project showcases my web development skil
 ## Credits
 
 Special thanks to **Ade-mir**, from whose work I drew inspiration for this profile. Credit to their original project can be found [here](https://github.com/Ade-mir).
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
