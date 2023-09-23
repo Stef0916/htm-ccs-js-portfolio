@@ -46,7 +46,7 @@
     }
     #profile {
         height: 83vh;
-        margin-bottom: 0;
+        margin-bottom: 2;
     }
     article {
         font-size: 1rem;
@@ -55,11 +55,27 @@
         height: fit-content;
         margin-bottom: 2rem;
     }
-    .about-containers, 
+    .about-containers,
     .contact-info-upper-container, 
     .btn-container {
         flex-wrap: wrap;
     }
+
+    /* Adjust the position of the text and picture in the About section */
+    #about .section-container {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center text horizontally */
+    }
+
+    .about-pic {
+        width: 70%; /* Make the picture take full width */
+        height: 100%;
+        max-width: 200px; /* Optionally, set a max width */
+        margin-top: 7rem; /* Add some top margin to the picture */
+        margin-left: 6rem;
+        margin-right: 8rem;
+    }
+
     .contact-info-container {
         margin: 0;
     }
@@ -74,7 +90,7 @@
     }
     .nav-links {
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 0.2rem;
         text-align: center;
     }
     .section__pic-container {
@@ -87,9 +103,35 @@
     }
     .title {
         font-size: 2rem;
+        margin-left: -2rem;
     }
     .text-container {
         text-align: justify;
+    }
+
+    .about-arrow {
+        display: none !important;
+    } 
+    
+    .section__pic-container {
+        position: center;
+        z-index: 1 !important; /* Ensure the profile picture is in front */
+        margin-right: 10px;
+    }
+
+    .hamburger-menu {
+        position: relative;
+        z-index: 2 !important; /* Ensure the hamburger menu is in front */
+    }
+
+    /* Adjust the top value for the profile picture */
+    .section__pic-container {
+        top: 0; /* You can adjust this value as needed */
+    }
+
+    #experience .article-container{
+        width: 90%;
+        height: 90%;
     }
 }
 
