@@ -1,52 +1,126 @@
-@media  screen and (max-width: 1400px) {
+@media screen and (max-width: 1400px) {
     #profile {
-        height: 83vh;
-        margin-bottom: 6rem;
+      height: 83vh;
+      margin-bottom: 6rem;
     }
     .about-containers {
-        flex-wrap: wrap;
+      flex-wrap: wrap;
     }
-}
-
-@media  screen and (max-width: 1200px) {
+    #contact,
+    #projects {
+      height: fit-content;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
     #desktop-nav {
-        display: none;
+      display: none;
     }
     #hamburger-nav {
-        display: flex;
+      display: flex;
     }
-    #experience, .experience-details-container {
-        margin-top: 2rem;
+    #experience,
+    .experience-details-container {
+      margin-top: 2rem;
     }
-    #profile, .section-container {
-        display: block;
+    #profile,
+    .section-container {
+      display: block;
     }
     .arrow {
-        display: none;
+      display: none;
     }
-    section, .section-container {
-        height: fit-content;
+    section,
+    .section-container {
+      height: fit-content;
     }
     section {
-        margin: 0 5%;
+      margin: 0 5%;
     }
     .section__pic-container {
-        width: 275px;
-        height: 275px;
-        margin: 0 auto 2rem;
+      width: 275px;
+      height: 275px;
+      margin: 0 auto 2rem;
     }
     .about-containers {
-        margin-top: 0;
+      margin-top: 0;
     }
-}
+  }
 
 @media  screen and (max-width: 600px) {
-    #contact, footer {
+    #contact, 
+    footer {
         height: 40vh;
     }
     #profile {
         height: 83vh;
-        margin-bottom: 2;
+        margin-bottom: 0;
+    }
+    #profile div.section__pic-container img {
+      margin-right: 1.6rem;
+    }
+    #profile div.section__text h1.title {
+      margin-left: 0.2rem;
+    }  
+    #about {
+      padding: 1rem;
+    }
+    #about div.details-container {
+      max-width: 90%;
+    }
+    #about div.text-container p {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    #about h1.title {
+      margin-bottom: 2rem;
+      margin-left: 0.4rem;
+    }
+    #about p.section__text_p1 {
+      margin-top: -2rem;
+    } 
+    #about .details-container p {
+      margin-bottom: 1rem;
+    } 
+    #about .details-container p {
+      margin-bottom: 1rem;
+      margin-top: 0rem;
+    }        
+    #experience {
+        margin-top: 20rem;
+    }
+    #experience div.details-container.projects div.article-container h3 {
+      margin-left: 1rem;
+    }
+    #experience div.details-container.projects div.article-container img.icon {
+      margin-left: 1rem;
+    }
+    #experience div.details-container div.article-container h3 {
+      margin-left: 1rem;
+    }
+    #experience div.details-container div.article-container img.icon {
+      margin-left: 1rem;
+    }
+    #experience p.section__text__p1 {
+      margin-top: 6rem;
+    }
+    #experience h1.title {
+      margin-left: 0.3rem;
+    }
+    #experience .details-container.projects h2.experience-sub-title {
+      font-size: 24px;
+    }  
+    #experience .details-container h2.experience-sub-title {
+      font-size: 24px;
+    }    
+    #experience .details-container h2.experience-sub-title {
+      font-size: 24px;
+    }  
+    #projects {
+        margin-top: -7rem;
+    }
+    #portfolio {
+        margin-top: -16rem;
     }
     article {
         font-size: 1rem;
@@ -79,7 +153,8 @@
     .contact-info-container {
         margin: 0;
     }
-    .contact-info-container p, .nav-links li a {
+    .contact-info-container p, 
+    .nav-links li a {
         font-size: 1rem;
     }
     .experience-sub-title {
@@ -129,9 +204,65 @@
         top: 0; /* You can adjust this value as needed */
     }
 
-    #experience .article-container{
-        width: 90%;
-        height: 90%;
+    /* General styles to fit each section to the screen */
+    #about, #experience, #projects, #portfolio {
+        width: 100%;
+        height: auto; /* Adjusts the height based on content */
+        margin: 0;
+        padding: 0;
     }
+
+    /* Styles specific to the shared .experience-details-container class within each section */
+    #about .experience-details-container,
+    #experience .experience-details-container,
+    #projects .experience-details-container,
+    #portfolio .experience-details-container {
+        width: 100%;
+        flex: 1;
+        flex-direction: column;
+        flex-basis: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Ensure child containers expand to full width */
+    .details-container {
+        width: 100%;
+        flex: 1;
+        flex-basis: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    #experience .experience-details-container {
+      padding: 1rem;  /* Adjust this value as needed */
+    }
+    #about .experience-details-container {
+      padding: 1rem;  /* Adjust this value as needed */
+    }
+    #portfolio .color-container h2.portfolio-title {
+      font-size: 24px;
+    }
+    html body section#portfolio div.experience-details-container div.about-containers div.details-container.color-container h2.experience-sub-title.portfolio-title {
+      font-size: 24px;
+    }
+    html body section#portfolio div.experience-details-container div.about-containers div.details-container.color-container h2.experience-sub-title.portfolio-title {
+      font-size: 24px;
+    }
+    html body section#projects h1.title {
+      margin-left: 0.3rem;
+    }
+    html body section#portfolio h1.title {
+      margin-left: 0.8rem;
+    }
+    html body section#portfolio div.experience-details-container div.about-containers div.details-container.color-container div.article-container img.portfolio-img {
+      margin-left: 1rem;
+    }
+    html body section#contact h1.title {
+      margin-left: 1rem;
+    }
+    html body section#contact p.section__text__p1 {
+      margin-top: -10rem;
+    }  
 }
+    
 

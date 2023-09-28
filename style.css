@@ -379,6 +379,22 @@ section {
     flex-direction: column;
 }
 
+/* Common style for all projects */
+.details-container.project-small {
+    border-color: rgb(163, 163, 163);
+    background: rgb(250, 250, 250);
+    padding: 1.5rem;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    min-width: 200px; 
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem; /* give some space around each project */
+}
+
 .article-container {
     display: flex;
     text-align: left;
@@ -450,9 +466,24 @@ article .icon {
     /* Add any other styles or modifications you want */
 }
 
+/* Common style for all projects */
+.details-container.large-project {
+    border-color: rgb(163, 163, 163);
+    background: rgb(250, 250, 250);
+    padding: 1.5rem;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    min-width: 200px; 
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem; /* give some space around each project */
+}
 
 /* Common style for all projects */
-.details-container.color-container {
+.details-container.project-small {
     border-color: rgb(163, 163, 163);
     background: rgb(250, 250, 250);
     padding: 1.5rem;
@@ -557,6 +588,22 @@ article .icon {
     color: black;
     border-color: rgb(163, 163, 163);
   }
+
+  /* Common style for all projects */
+.details-container.color-container {
+    border-color: rgb(163, 163, 163);
+    background: rgb(250, 250, 250);
+    padding: 1.5rem;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    min-width: 200px; 
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem; /* give some space around each project */
+}
 
 /* CONTACT */
 

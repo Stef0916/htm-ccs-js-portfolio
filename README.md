@@ -1,6 +1,6 @@
 # Responsive Profile using HTML & CSS
 
-Welcome to my responsive profile. This project showcases my web development skills with a clean and responsive design. If you're curious about the design, coding practices, or just wish to get an idea for your project, feel free to explore!
+Welcome to my responsive profile. This project showcases my web responsive portfolio where you can find all my professional and contact information.
 
 ## Preview
 
