@@ -561,6 +561,17 @@ article .icon {
     box-shadow: 16px 16px 15px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover for a subtle lift effect */
 }
 
+html body section#projects div.experience-details-container div.about-containers div.details-container.project-small div.article-container img.project-img-small {
+    max-height: 200px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+html body section#projects div.experience-details-container div.about-containers div.details-container.large-project div.article-container img.project-img {
+    max-height: 200px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 /* PORTFOLIO */
 
 #portfolio {
@@ -604,6 +615,12 @@ article .icon {
     justify-content: space-between;
     margin: 1rem; /* give some space around each project */
 }
+
+.portfolio-img {
+    margin-top: 2rem;
+    max-height: 200px;
+    max-width: 400px;
+  }
 
 /* CONTACT */
 

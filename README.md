@@ -6,7 +6,13 @@ Welcome to my responsive profile. This project showcases my web responsive portf
 
 [Live Demo](https://stefani-gamboa-portfolio.netlify.app/)
 
-![Profile Screenshot](./assets/Screenshot_1.png)
+**Web-profile:** <p align="center">
+  <img src="assets/profile_picture.png" alt="Profile phone Screenshot" width="400" />
+</p>
+
+**Phone-style:** <p align="center">
+  <img src="assets/profile_phone.png" alt="Profile phone Screenshot" width="200" />
+</p>
 
 ## Features
 
