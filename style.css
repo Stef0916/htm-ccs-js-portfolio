@@ -622,6 +622,11 @@ html body section#projects div.experience-details-container div.about-containers
     max-width: 400px;
   }
 
+  html body section#portfolio div.experience-details-container div.about-containers div.details-container.color-container h2.experience-sub-title.portfolio-title {
+    margin-left: -1.2rem;
+    margin-right: -1.2rem;
+}
+
 /* CONTACT */
 
 #contact {
