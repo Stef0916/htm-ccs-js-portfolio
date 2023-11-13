@@ -41,6 +41,12 @@
              This &alpha; angle, especially in bis-&mu;-hydroxo complexes, is influenced by hydrogen bonding with adjacent counterions. 
              <b>However, no formal correlation between &theta;, &alpha; and J has been established using quantum chemical approaches. </b>
         </p>
+
+        <figure>
+            <img src="./assets/picture_4_project_2.png" alt="Description of Image" class="centered-image"> 
+            <figcaption class="image-caption" style="text-align: center;"><b>Figure 1.</b> Magneto-Structural correlation</figcaption>
+        </figure>
+
     </section>
 
         <!-- Implementation and Results -->
@@ -53,18 +59,18 @@
         the positions of the hydrogen atoms. It becomes clear that to achieve a more precise description of the magnetic properties 
         of metal complexes featuring a bis-&mu;-hydroxo bridging ligand, the position of the hydroxo hydrogen must be properly 
         considered. Therefore, a new correlation connecting the &alpha; and &theta; angles with the J<sub>calc</sub> was established using complex <b>1</b> as a 
-        reference (Figure 1). 
+        reference (Figure 2). 
     </p>    
     
     <figure>
         <img src="./assets/picture_1_project_2.png" alt="Description of Image" class="centered-image"> 
-        <figcaption class="image-caption" style="text-align: center;"><b>Figure 1.</b> Quantum refined crystal structure at 10 K (QR) of complex 1. Hydrogen atoms from carbon centres were removed for clarity.</figcaption>
+        <figcaption class="image-caption" style="text-align: center;"><b>Figure 2.</b> Quantum refined crystal structure at 10 K (QR) of complex 1. Hydrogen atoms from carbon centres were removed for clarity.</figcaption>
     </figure>
 
     <p>    
         Model complexes featuring seven &theta; angles from 95˚ to 101˚ were designed, and the &alpha; angle was scanned 
         from 0˚ to 60˚. The computed J values were all extracted from the previous BS calculations using model complexes, the TPSSh 
-        functional and def2-TZVP basis set, and a three-dimension correlation (3D) was obtained (Equation I, Figure 2) (see GitHub link for the code implementation):
+        functional and def2-TZVP basis set, and a three-dimension correlation (3D) was obtained (Equation I, Figure 3) (see GitHub link for the code implementation):
         <div class="equation">
             <b>\[ J_{\text{calc}} = 7.50 \times 10^3 - 9.78 \times 10^{-1} \theta - 7.49 \times 10^1 \alpha + 1.81 \times 10^{-1} \theta^2 - 6.39 \times 10^{-3} \theta^2 \alpha - 3.70 \times 10^{-4} \theta^2 \alpha^2 - 4.22 \alpha^2 - 7.95 \times 10^{-2} \alpha^2 \theta + 1.46 \theta \alpha \]</b>
         </div>
@@ -73,7 +79,7 @@
 
     <section class="project-image">
         <img src="./assets/main_picture_project_2.png" alt="Main image of the project" class="centered-image-1">
-        <figcaption class="image-caption-1" style="text-align: center;"><b>Figure 2.</b> Three-dimension correlation of the Cu-OH-Cu (&theta;, ˚) and out-of-plane angles (&alpha;, ˚) with the calculated exchange coupling constant J (J<sub>calc</sub>, cm<sup>-1</sup>) using complex <b>1</b> as a reference model.</figcaption>
+        <figcaption class="image-caption-1" style="text-align: center;"><b>Figure 3.</b> Three-dimension correlation of the Cu-OH-Cu (&theta;, ˚) and out-of-plane angles (&alpha;, ˚) with the calculated exchange coupling constant J (J<sub>calc</sub>, cm<sup>-1</sup>) using complex <b>1</b> as a reference model.</figcaption>
     </section>
 
     <p>
@@ -363,12 +369,12 @@
          but also the &alpha; angle. This is also reflected in the mean absolute differences since the high value of MAD<sub>X-ray</sub> of 132 
          cm<sup>-1</sup> suggests a significant difference between the experimental and calculated results, while a relatively low MAD<sub>3D</sub> 
          of 11 cm<sup>-1</sup> is obtained by using the 3D correlation. The same rationale applies when looking at the resulting ADP values, 
-         which are systematically lower when the &alpha; angle is extracted from the 3D correlation for all complexes listed in Table 1 and Figure 3.
+         which are systematically lower when the &alpha; angle is extracted from the 3D correlation for all complexes listed in Table 1 and Figure 4.
     </p>
 
     <section class="project-image">
         <img src="./assets/picture_3_project_2.png" alt="Main image of the project" class="centered-image-2">
-        <figcaption class="image-caption-3" style="text-align: justify;"><b>Figure 3.</b> Top: Absolute 
+        <figcaption class="image-caption-3" style="text-align: justify;"><b>Figure 4.</b> Top: Absolute 
             differences (cm<sup>-1</sup>) between experimental and calculated J values (cm<sup>-1</sup>) 
             using the α angle from the X-ray crystal structure (AD(X-ray), blue bars) and from the 3D 
             correlation (AD(3D), orange bars). Bottom: Absolute percentage deviation between experimental 
