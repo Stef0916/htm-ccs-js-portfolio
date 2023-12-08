@@ -276,7 +276,7 @@ section {
     height: 100vh;           /* Full viewport height. Adjust as needed */
     flex-direction: column;  /* Stack children vertically */
     position: relative;
-    margin-bottom: 200px;
+    margin-bottom: 400px;
     margin-top: 200px;
 }
 
@@ -311,7 +311,7 @@ section {
 .arrow {
     position: absolute;
     right: -5rem;
-    bottom: 2rem;
+    bottom: -14rem;
 }
 
 .details-container {
@@ -348,7 +348,7 @@ section {
 
 #experience {
     position: relative;
-    margin-bottom: 200px;
+    margin-bottom: 30px;
     margin-top: 200px;
 }
 
@@ -426,6 +426,12 @@ article .icon {
     cursor: default;
 }
 
+.arrow {
+    position: absolute;
+    right: -5rem;
+    bottom: -3rem;
+}
+
 .details-container {
     height: auto; /* This will take up only as much space as required by the content. */
     max-height: 800px; /* This limits the maximum height, you can adjust as per your needs. */
@@ -456,6 +462,7 @@ article .icon {
     flex-direction: column;
     margin: 26rem 10rem;
     margin-bottom: 300px;
+    margin-top: 500px;
 }
 
 #projects .icon.arrow {
